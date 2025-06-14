@@ -1,60 +1,94 @@
-## Setup Instructions
+## **Setup Instructions**
 
-### Prerequisites
+### **Prerequisites**
 
-- Node.js (version 16 or higher)
-- npm or yarn package manager
+Make sure you have the following installed before starting:
 
-### Installation
+- **Node.js** (v16 or higher)
+- **npm** or **yarn** (a JavaScript package manager)
 
-1. **Clone or download the project files**
+### **Installation**
 
-   # If using git
+1. **Get the Project Code**
 
+   If you're using Git:
+
+   ```bash
    git clone <repository-url>
    cd heroku-demo
+   ```
 
-2. **Install dependencies**
+2. **Install the Required Packages**
+
+   Run:
+
+   ```bash
    npm install
+   ```
 
-3. **Verify installation**
+3. **Verify Cypress Installation**
+
+   Check that Cypress is correctly set up:
+
+   ```bash
    npx cypress verify
+   ```
 
-## Running Tests
+## **Running Tests**
 
-### Interactive Mode (Cypress Test Runner)
+### **Interactive Mode** (Cypress GUI)
 
-# Open Cypress Test Runner GUI
+To open the Cypress Test Runner in a GUI:
 
+```bash
 npm run cy:open
+```
 
-### Headless Mode (Command Line)
+### **Headless Mode** (Command Line)
 
+To run all tests without opening the GUI:
+
+```bash
 npm test
+```
 
-# Run tests in Chrome browser
+#### **Run Tests in Specific Browsers**
 
-npm run test:chrome
+- Chrome:
 
-# Run tests in Firefox browser
+  ```bash
+  npm run test:chrome
+  ```
 
-npm run test:firefox
+- Firefox:
 
-# Run only login tests
+  ```bash
+  npm run test:firefox
+  ```
 
+#### **Run Only Login Tests**
+
+```bash
 npm run test:login
+```
 
-### Specific Test Execution
+### **Specific Test Execution**
 
-# Run a specific test file
+- Run a specific test file:
 
-npm run cy:run:spec "cypress/e2e/login.cy.js"
+  ```bash
+  npm run cy:run:spec "cypress/e2e/login.cy.js"
+  ```
 
-# Run with specific browser
+- Run using a specific browser:
 
-npm run cy:run:chrome
-npm run cy:run:firefox
+  ```bash
+  npm run cy:run:chrome
+  npm run cy:run:firefox
+  ```
 
-# Run with debug output
+- Run with debug logs enabled:
 
-DEBUG=cypress:\* npm test
+  ```bash
+  DEBUG=cypress:* npm test
+  ```
