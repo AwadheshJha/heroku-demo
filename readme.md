@@ -93,8 +93,8 @@ npm run test:login
   DEBUG=cypress:* npm test
   ```
 
-Brief explanation of your framework choice:
-Cypress Choice:
+Brief explanation about framework choice:
+Cypress:
 
 Modern JavaScript framework with excellent developer experience
 Built-in waiting and retry logic eliminates flaky tests
