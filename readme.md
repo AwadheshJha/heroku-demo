@@ -97,14 +97,14 @@ npm run test:login
 
 ### **Cypress:**
 
-Modern JavaScript framework with excellent developer experience
-Built-in waiting and retry logic eliminates flaky tests
-Real-time debugging and visual test execution
-No additional driver setup required
+- Modern JavaScript framework with excellent developer experience
+- Built-in waiting and retry logic eliminates flaky tests
+- Real-time debugging and visual test execution
+- No additional driver setup required
 
 ### **Page Object Model:**
 
-Industry standard for maintainable test automation
-Separates test logic from Actual tests
-Makes tests readable and business-focused
-Simplifies maintenance when UI changes
+- Industry standard for maintainable test automation
+- Separates test logic from Actual tests
+- Makes tests readable and business-focused
+- Simplifies maintenance when UI changes
