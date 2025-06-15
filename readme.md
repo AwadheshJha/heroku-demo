@@ -94,14 +94,15 @@ npm run test:login
   ```
 
 Brief explanation about framework choice:
-Cypress:
+
+# Cypress:
 
 Modern JavaScript framework with excellent developer experience
 Built-in waiting and retry logic eliminates flaky tests
 Real-time debugging and visual test execution
 No additional driver setup required
 
-Page Object Model:
+# Page Object Model:
 
 Industry standard for maintainable test automation
 Separates test logic from Actual tests
