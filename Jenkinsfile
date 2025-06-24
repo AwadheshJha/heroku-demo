@@ -8,6 +8,7 @@ pipeline {
     environment {
         CI = 'true'
         BASE_URL = 'https://the-internet.herokuapp.com'
+        CYPRESS_CACHE_FOLDER = './cypress-cache'
     }
 
     stages {
@@ -26,10 +27,11 @@ pipeline {
         }
 
         stage('Run Cypress Tests') {
-            steps {
-                sh 'npx cypress run --config baseUrl=$BASE_URL'
-            }
-        }
+    steps {
+        sh 'npx cypress run --config baseUrl=$BASE_URL --cache-folder=$CYPRESS_CACHE_FOLDER --record false --parallel false'
+    }
+}
+
 
         stage('Archive Test Results') {
             steps {
