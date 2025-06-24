@@ -2,24 +2,26 @@ pipeline {
     agent any
 
     tools {
-        nodejs "NodeJS_24" // match with Global Tool name
+        nodejs "nodejs" // Ensure this matches NodeJS name in Jenkins
     }
 
     environment {
         CI = 'true'
-        BASE_URL = 'https://the-internet.herokuapp.com' // Optional for E2E
+        BASE_URL = 'https://the-internet.herokuapp.com'
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: 'AwadheshJha', url: 'https://github.com/AwadheshJha/heroku-demo.git', branch: 'develop'
+                // Remove credentialsId if repo is public
+                git url: 'https://github.com/AwadheshJha/heroku-demo.git', branch: 'develop'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'
+                sh 'node -v'  // Optional: confirm NodeJS version
+                sh 'npm install'  // Change to npm install if package-lock.json is missing
             }
         }
 
