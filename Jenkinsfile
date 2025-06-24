@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs "nodejs" // match with Global Tool name
+        nodejs "NodeJS_24" // match with Global Tool name
     }
 
     environment {
