@@ -28,7 +28,7 @@ pipeline {
 
         stage('Run Cypress Tests') {
     steps {
-        sh 'npx cypress run --config baseUrl=$BASE_URL --cache-folder=$CYPRESS_CACHE_FOLDER --record false --parallel false'
+        sh 'npx cypress run --config baseUrl=$BASE_URL --cache-folder $CYPRESS_CACHE_FOLDER'
     }
 }
 
