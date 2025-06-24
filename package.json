@@ -28,9 +28,10 @@
   "author": "Awadhesh Jha",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^13.6.0"
+    "cypress": "^13.6.0",
+    "mocha": "^11.7.1",
+    "mocha-junit-reporter": "^2.2.1"
   },
-  "dependencies": {},
   "engines": {
     "node": ">=16.0.0"
   }

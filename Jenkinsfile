@@ -1,9 +1,12 @@
 pipeline {
     agent any
 
+    options {
+        ansiColor('xterm')
+    }
+
     tools {
         nodejs "nodejs" // Ensure this matches NodeJS name in Jenkins
-    }
 
     environment {
         CI = 'true'
@@ -29,6 +32,12 @@ pipeline {
         stage('Run Cypress Tests') {
     steps {
         sh 'npx cypress run --config baseUrl=$BASE_URL'
+    }
+}
+
+stage('Publish Test Results') {
+    steps {
+        junit 'cypress/results/*.xml'
     }
 }
 

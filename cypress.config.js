@@ -10,6 +10,10 @@ module.exports = defineConfig({
       username: "tomsmith",
       password: "SuperSecretPassword!",
     },
+    reporter: "mocha-junit-reporter",
+    reporterOptions: {
+      mochaFile: "cypress/results/results-[hash].xml",
+    },
 
     // Viewport settings
     viewportWidth: 1280,
