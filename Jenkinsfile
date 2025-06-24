@@ -2,18 +2,18 @@ pipeline {
     agent any
 
     tools {
-        nodejs "NodeJS_18" // match with Global Tool name
+        nodejs "nodejs" // match with Global Tool name
     }
 
     environment {
         CI = 'true'
-        BASE_URL = 'https://your-app-url.com' // Optional for E2E
+        BASE_URL = 'https://the-internet.herokuapp.com' // Optional for E2E
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: 'your-credentials-id', url: 'https://github.com/your/repo.git', branch: 'main'
+                git credentialsId: 'AwadheshJha', url: 'https://github.com/AwadheshJha/heroku-demo.git', branch: 'develop'
             }
         }
 
