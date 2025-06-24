@@ -22,13 +22,13 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'node -v'  // Optional: confirm NodeJS version
-                sh 'npm install'  // Change to npm install if package-lock.json is missing
+                sh 'npm ci'  // Use npm ci for clean install
             }
         }
 
         stage('Run Cypress Tests') {
     steps {
-        sh 'npx cypress run --config baseUrl=$BASE_URL --cache-folder $CYPRESS_CACHE_FOLDER'
+        sh 'npx cypress run --config baseUrl=$BASE_URL'
     }
 }
 
