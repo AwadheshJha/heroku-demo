@@ -38,7 +38,7 @@ pipeline {
 
         stage('Run postman Tests') {
             steps {
-                sh 'newman run collection.json --reporters cli'
+                sh '/usr/local/bin/newman run collection.json --reporters cli'
             }
         }
 
