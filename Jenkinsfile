@@ -36,6 +36,12 @@ pipeline {
             }
         }
 
+        stage('Run postman Tests') {
+            steps {
+                sh 'newman run collection.json --reporters cli'
+            }
+        }
+
         stage('Publish Test Results') {
             steps {
                 junit 'cypress/results/*.xml'
@@ -46,6 +52,7 @@ pipeline {
             steps {
                 archiveArtifacts artifacts: 'cypress/videos/**/*.mp4', allowEmptyArchive: true
                 archiveArtifacts artifacts: 'cypress/screenshots/**/*.png', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'newman-report/*.html', fingerprint: true
             }
         }
     }
